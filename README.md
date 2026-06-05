@@ -1,2 +1,2 @@
-# Programacao_de_aplicacoes_em_python
+# Programação de Aplicações em Python
 Curso de programação de aplicações em Python da Atec
