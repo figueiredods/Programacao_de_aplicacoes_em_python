@@ -30,32 +30,67 @@ from Turma import Turma
         
         # Exemplo: Matemática - 16 valores
 
-a1 = Aluno(1, "Daniel")
-# a1.mostrarAluno()
-n1 = Nota("Informática", 10)
-n2 = Nota("Português", 20)
-a1.adicionarNota(n1)
-a1.adicionarNota(n2)
-a1.mostrarAluno()
-a2 = Aluno(2, "Pedro")
-# a1.mostrarAluno()
-n1 = Nota("Informática", 5)
-n2 = Nota("Português", 20)
-a2.adicionarNota(n1)
-a2.adicionarNota(n2)
-a2.mostrarAluno()
-t1 = Turma("IT")
-print("*"*30)
-t1.adicionarAluno(a1)
-t1.adicionarAluno(a2)
-t1.listarAlunos()
-x = t1.procurarAluno(1)
-x.mostrarAluno()
-t1.melhorAluno()
-# print(a1.listarNotas())
-# print(a1.calcularMedia())
-# print(a1.procurarNota("Informática"))
-# # print(n1.mostrarNota())
-# print(a1.mostrarAluno())
-# t1 = Turma("TI")
-# t1.adicionarAluno(a1)
+
+# Norberto solution:
+
+# Criar turma
+turma = Turma("12ºA")
+
+# Criar alunos
+aluno1 = Aluno(1, "João")
+aluno2 = Aluno(2, "Maria")
+aluno3 = Aluno(3, "Pedro")
+
+# Adicionar notas ao João
+aluno1.adicionarNota(Nota("Matemática",18))
+aluno1.adicionarNota(Nota("Português", 15))
+aluno1.adicionarNota(Nota("Inglês", 17))
+
+# Adicionar notas à Maria
+aluno2.adicionarNota(Nota("Matemática", 20))
+aluno2.adicionarNota(Nota("Português", 19))
+aluno2.adicionarNota(Nota("Inglês", 18))
+
+# Adicionar notas ao Pedro
+aluno3.adicionarNota(Nota("Matemática", 12))
+aluno3.adicionarNota(Nota("Português", 14))
+aluno3.adicionarNota(Nota("Inglês", 13))
+
+# Adicionar alunos à turma
+turma.adicionarAluno(aluno1)
+turma.adicionarAluno(aluno2)
+turma.adicionarAluno(aluno3)
+
+# Listas Alunos
+turma.listarAlunos()
+
+# procurar aluno n~º 2
+aluno = turma.procurarAluno(2)
+
+if aluno:
+    print("\n*** Este é o aluno: ***\n")
+    aluno.mostrarAluno()
+else:
+    print("\n*** Aluno não encontrado.***\n")
+
+# nota de matematica do joão
+nota = aluno1.procurarNota("Matemática")
+if nota:
+    print("\n*** Nota do aluno: ***\n")
+    nota.mostrarNota()
+else:
+    print("\n*** Disciplina não encontrada. ***\n")
+
+    # media da turma
+print(f"\n*** Média da turma: {turma.mediaTurma():.2f} ***\n")
+
+    # melhor Aluno
+melhor = turma.melhorAluno()
+
+if melhor:
+    melhor.mostrarAluno()
+# remover aluno 3
+turma.removerAluno(3)
+
+# listas actualizado
+turma.listarAlunos()

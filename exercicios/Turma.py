@@ -1,4 +1,4 @@
-from Aluno import Aluno
+# from Aluno import Aluno
 # Classe Turma
  
     # Atributos
@@ -117,29 +117,59 @@ from Aluno import Aluno
 
 class Turma:
     def __init__(self, nomeTurma):
-        self.__turma = nomeTurma
+        self.__nomeTurma = nomeTurma
         self.__alunos = []
 
     #methods
     
     def __str__(self):
-        return f"{self.__turma}{self.listarAlunos()}\n"
+        return f"{self.__nomeTurma}{self.listarAlunos()}\n"
 
-    def adicionarAluno(self, x):
-        self.__alunos.append(x)
-    def removerAluno(self, x):
-        self.__alunos.remove(x)
-    def procurarAluno(self, numero):
+    def adicionarAluno(self, aluno): # adicionar aluno
+        for i in self.__alunos:
+            if i.getNumero() == aluno.getNumero():
+                print("Já existe um aluno com esse número!\n")
+                aluno.setNumero(len(self.__alunos)+1)
+        self.__alunos.append(aluno)
+    def removerAluno(self, numero): # remover aluno pelo número
+        for aluno in self.__alunos:
+            if aluno.getNumero() == numero:
+                self.__alunos.remove(aluno)
+                print("Aluno removido com sucesso!\n")
+                return
+        print("Aluno não encontrado!\n")
+    def procurarAluno(self, numero): # procurar aluno pelo número
         for aluno in self.__alunos:
             if numero == aluno.getNumero():
                 return aluno
         return None
-    def listarAlunos(self):
+    def listarAlunos(self): # lista os alunos
+        if len(self.__alunos) == 0:
+            print("Não existem alunos!\n")
+            return
+        
+        print(f"\nLista de alunos da turma {self.__nomeTurma}:")
         for aluno in self.__alunos:
-            print(f"{aluno.getNumero()} - {aluno.getNome()}")
+            aluno.mostrarAluno()
+            print("-" * 20)
     def melhorAluno(self):
+        if len(self.__alunos) == 0:
+            print("Não existem alunos!\n")
+            return None
+        
         melhor = self.__alunos[0]
+
         for aluno in self.__alunos:
-            if melhor.calcaularMedia() < aluno.calcularMedia():
+            if aluno.calcularMedia() > melhor.calcularMedia():
                 melhor = aluno 
-        print(f"test: {melhor.getNome()}")
+        return melhor
+    def mediaTurma(self):
+        if len(self.__alunos) == 0:
+            print("Não existem alunos!\n")
+            return None
+        soma = 0
+        
+        for aluno in self.__alunos:
+            soma += aluno.calcularMedia()
+
+        return soma / len(self.__alunos)
