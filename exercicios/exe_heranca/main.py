@@ -1,7 +1,7 @@
 # Imports
-from PessoaSuper import Pessoa
-from FuncionarioFilho import Funcionario
-from AlunoFilho import Aluno
+from Pessoa import Pessoa
+from Funcionario import Funcionario
+from Aluno import Aluno
 
 p1 = Funcionario(1, "Daniel", 1000)
 print(p1)

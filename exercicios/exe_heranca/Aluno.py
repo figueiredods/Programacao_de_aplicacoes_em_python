@@ -1,5 +1,5 @@
 # Imports
-from PessoaSuper import Pessoa
+from Pessoa import Pessoa
 
 # Crie uma subclasse denominada Aluno que herde da classe Pessoa
 # Requisitos

@@ -1,4 +1,4 @@
-import Pessoa
+from Pessoa import Pessoa
 from Carro import Carro
 from Dono import Dono
 

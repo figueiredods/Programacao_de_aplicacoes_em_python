@@ -1,5 +1,5 @@
 # Imports
-from PessoaSuper import Pessoa
+from Pessoa import Pessoa
 
 class Funcionario(Pessoa):
     def __init__(self, numero, nome, salario):
