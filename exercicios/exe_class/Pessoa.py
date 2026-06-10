@@ -16,11 +16,11 @@ class Pessoa:
     # set # modifica o valor de um objecto (Atrinuto)
 
     def SetNome(self, nomaux):
-        self.__nome=nomaux
+        self.__nome = nomaux
     def SetIdade(self,idade):
-       self.__idade=idade
+       self.__idade = idade
     def SetNif(self,nif):
-       self.__nif=nif
+       self.__nif = nif
 
     def CalculaLetrasNome(self):
         return len(self.__nome)
