@@ -13,7 +13,7 @@ match op:
         print("\nOpção incorreta.\n")
 
 if op in [1, 2, 3]:        
-    print(f"Seu gênero é {genero}\n")
+    print(f"\nSeu gênero é {genero}\n")
 else:
     print("Escolha uma das opções válidas.\n")
 
@@ -21,23 +21,23 @@ else:
 
 num = int(input("Insira um número: "))
 if num < 0:
-    print(f"{num} é um número negativo\n")
+    print(f"\n{num} é um número negativo\n")
 elif num > 0:
-    print(f"{num} é um número positivo\n")
+    print(f"\n{num} é um número positivo\n")
 else:
-    print(f"{num} é um número neutro\n")
+    print(f"\n{num} é um número neutro\n")
 
 # 3: Faça um programa se idade estava [18-30] Jovem [31-60] adulto
 
 idade = int(input("Insira uma idade: "))
 if idade < 0:
-    print("Idade inválida\n")
+    print("\nIdade inválida\n")
 elif 18 <= idade <= 30:
-    print("Você é uma pessoa jovem\n")
+    print("\nVocê é uma pessoa jovem\n")
 elif 31 <= idade <= 60:
-    print("Você é um adulto\n")
+    print("\nVocê é um adulto\n")
 else:
-    print("Você tem menos de 18 ou mais de 60 anos\n")
+    print("\nVocê tem menos de 18 ou mais de 60 anos\n")
 
 # 4: Crie um programa em Python que peça a nota do aluno, que deve ser um float entre 0.00 e 10.0
 #   Se a nota for menor que 6.0, deve exibir a nota F.
@@ -48,25 +48,25 @@ else:
 
 nota = float(input("Insira a nota do aluno (entre 0 e 10): "))
 if nota < 0 or nota > 10:
-    print("Nota fora dos limites\n")
+    print("\nNota fora dos limites\n")
 elif nota < 6:
-    print("Nota F\n")
+    print("\nNota F\n")
 elif nota < 7:
-    print("Nota D\n")
+    print("\nNota D\n")
 elif nota < 8:
-    print("Nota C\n")
+    print("\nNota C\n")
 elif nota < 9:
-    print("Nota B\n")
+    print("\nNota B\n")
 else:
-    print("Nota A\n")
+    print("\nNota A\n")
 
 
 # 5: Calcular o salário semanal de um colaborador, que recebe à hora, a partir apenas do nº de horas que este trabalhou. Sabe-se que o número de horas semanais é 36 e que o preço à hora é de 7,5€. Se o colaborador fizer horas extra (mais de 36 horas) recebe 10€ por cada hora extra. Note que não pode pedir ao utilizador para indicar as horas extra, pois é um dado que pode ser calculado
 
 horas = int(input("Insira a quantidade de hotas trabalhadas: "))
 if horas < 0:
-    print("Número de horas trabalhadas negativas.\n")
+    print("\nNúmero de horas trabalhadas negativas.\n")
 elif horas <= 36:
-    print(f" Com {horas} horas trabalhadas seu salário é de {horas * 7.5:.2f}€\n")
+    print(f"\nCom {horas} horas trabalhadas seu salário é de {horas * 7.5:.2f}€\n")
 else:
-    print(f"Com {horas} horas trabalhadas, seu salário é de {36 * 7.5 + (horas - 36) * 10:.2f}€\n")
+    print(f"\nCom {horas} horas trabalhadas, seu salário é de {36 * 7.5 + (horas - 36) * 10:.2f}€\n")
