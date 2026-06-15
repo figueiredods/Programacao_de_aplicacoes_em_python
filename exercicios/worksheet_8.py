@@ -10,23 +10,30 @@ import random
 #  ValorcomIva()
 #  ImprimeLista()
 
+print("\nNúmero é par?")
 par = LucasUtils.CheckPar(124)
 print(par)
 
+# cria uma lista com 10 números entre 1 e 100
 lista = random.sample(range(1, 100), 10)
 
+print("\nA soma da lista é: ")
 soma = LucasUtils.Somalista(lista)
 print(soma)
 
+print("\nO maior números da lista é: ")
 maior = LucasUtils.MaxLista(lista)
 print(maior)
 
+print("\nO menor número da lista é: ")
 menor = LucasUtils.MinLista(lista)
 print(menor)
 
+print("\nO valor com IVA")
 preco = LucasUtils.ValorcomIva(100)
 print(f"{preco:.2f}")
 
+print("\nA lista impressa: ")
 LucasUtils.ImprimeLista(lista)
 
 # 2: Crie um modulo EuromilhoesUtils.py que tenha estes métodos e carateristicas:
