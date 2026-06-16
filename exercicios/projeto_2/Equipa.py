@@ -2,7 +2,7 @@ class Equipa:
     def __init__(self, nome, cidade):
         self.__nome = nome
         self.__cidade = cidade
-        self.__jogadores = []
+        self.jogadores = []
 
     def getNome(self):
         return self.__nome
@@ -15,49 +15,49 @@ class Equipa:
         self.__cidade = cidade
 
     # Adicionar jogador
-    def adicionarJogadores(self, nome):
-        for i in self.__jogadores:
-            if i.getNumero() == nome.getNumero():
+    def adicionarJogador(self, nome):
+        for i in self.jogadores:
+            if i.getNome() == nome:
                 print("\nJá existe umm jogador com este número\n")
 
-        self.__jogadores.append(nome)
-        print("\nAluno adicionado com sucesso!\n")
+        self.jogadores.append(nome)
+        print("\nJogador adicionado com sucesso!\n")
 
     def removerJogador(self, nome):
-        for i in self.__jogadores:
+        for i in self.jogadores:
             if i.getNome() == nome:
-                self.__jogadores.remove(i)
+                self.jogadores.remove(i)
                 print("\nJogador removido com sucesso\n")
                 return
         print("\nJogador não encontrado\n")
 
     def procurarJogador(self, nome):
-        for i in self.__jogadores:
+        for i in self.jogadores:
             if i.getNome() == nome:
                 return i
         print("\nJogador não encontrado\n")
     
     def mostrarJogadores(self):
-        if len(self.__jogadores) == 0:
+        if len(self.jogadores) == 0:
             print("\nNão existem jogadores\n")
             return
         
         print(f"\nOs jogadores da equipa {self.__nome} são:")
         print("-" * 40)
-        for i in self.__jogadores:
+        for i in self.jogadores:
             print("-" * 40)
             i.mostrarJogador()
 
     def totalGolos(self):
-        if len(self.__jogadores) == 0:
-            return 0
+        if len(self.jogadores) == 0:
+            print("\nEquipa sem jogadores\n")
         
         total = 0
-        for jogador in self.__jogadores:
+        for jogador in self.jogadores:
             
             total += jogador.getGolos()
         return total
     
     def totalJogadores(self):
-        return len(self.__jogadores)
+        return len(self.jogadores)
         

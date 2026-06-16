@@ -35,10 +35,10 @@ class Jogador:
             return 0
         
     def mostrarJogador(self):
-        print(f"Jogador: {self.__nome}")
+        print(f"\nJogador: {self.__nome}")
         print(f"Golos: {self.__golos}")
         print(f"Jogos: {self.__jogos}")
-        print(f"\nMédia de golos: {self.mediaGolos():.2f}")
+        print(f"\nMédia de golos: {self.mediaGolos():.2f}\n")
     
     def __str__(self):
         return f"\nNome: {self.__nome}\nPosição: {self.__posicao}\nGolos: {self.__golos}\nJogos: {self.__jogos}\nMédia golos: {self.mediaGolos():.2f} por jogo\n"
