@@ -40,7 +40,7 @@ class Campeonato:
 
         print("\nEquipas deste campeonato:")
         for i in self.equipas:
-            print(i.getNome())
+            print(f"- {i.getNome()}")
 
     def mostrarJogadores(self, equipa):
         if len(self.equipas) == 0:
